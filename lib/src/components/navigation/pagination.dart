@@ -1,3 +1,4 @@
+import 'package:radix_icons/radix_icons.dart' as r;
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class Pagination extends StatelessWidget {
@@ -70,13 +71,13 @@ class Pagination extends StatelessWidget {
     if (showLabel) {
       return GhostButton(
         onPressed: hasPrevious ? () => onPageChanged(page - 1) : null,
-        leading: const Icon(RadixIcons.chevronLeft).iconXSmall(),
+        leading: const Icon(r.RadixIcons.Chevron_Left).iconXSmall(),
         child: Text(localizations.buttonPrevious),
       );
     }
     return GhostButton(
       onPressed: hasPrevious ? () => onPageChanged(page - 1) : null,
-      child: const Icon(RadixIcons.chevronLeft).iconXSmall(),
+      child: const Icon(r.RadixIcons.Chevron_Left).iconXSmall(),
     );
   }
 
@@ -84,13 +85,13 @@ class Pagination extends StatelessWidget {
     if (showLabel) {
       return GhostButton(
         onPressed: hasNext ? () => onPageChanged(page + 1) : null,
-        trailing: const Icon(RadixIcons.chevronRight).iconXSmall(),
+        trailing: const Icon(r.RadixIcons.Chevron_Right).iconXSmall(),
         child: Text(localizations.buttonNext),
       );
     }
     return GhostButton(
       onPressed: hasNext ? () => onPageChanged(page + 1) : null,
-      child: const Icon(RadixIcons.chevronRight).iconXSmall(),
+      child: const Icon(r.RadixIcons.Chevron_Right).iconXSmall(),
     );
   }
 
